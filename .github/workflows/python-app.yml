@@ -10,13 +10,12 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Set up Python 3.8
-      uses: action/setup-python@v5
+      uses: actions/setup-python@v5  # Repositório correto com "actions"
       with:
         python-version: 3.8
-    - name: Instala dependencias
-      run: 
+    - name: Instala dependências
+      run: |
         python -m pip install --upgrade pip
         pip install pytest
     - name: Teste com pytest
-      run:
-        pytest
+      run: pytest
